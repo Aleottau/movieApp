@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieDetailMidCell" customModule="inhouseApp1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="102"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="102"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genreLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-3E-UhY">
+                        <rect key="frame" x="15" y="10" width="103" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uag-gm-qQ9">
+                        <rect key="frame" x="0.0" y="45" width="390" height="57"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feY-dh-NMe">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="57"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Nap-Yp-2Iq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="feY-dh-NMe" firstAttribute="top" secondItem="4Ej-EP-zZV" secondAttribute="top" id="RPc-NK-k5U"/>
+                            <constraint firstAttribute="height" constant="57" id="isn-NH-iCe"/>
+                            <constraint firstItem="feY-dh-NMe" firstAttribute="bottom" secondItem="4Ej-EP-zZV" secondAttribute="bottom" id="mmy-FL-tlq"/>
+                            <constraint firstItem="feY-dh-NMe" firstAttribute="trailing" secondItem="4Ej-EP-zZV" secondAttribute="trailing" id="ofD-SU-EjJ"/>
+                            <constraint firstItem="feY-dh-NMe" firstAttribute="leading" secondItem="4Ej-EP-zZV" secondAttribute="leading" id="rR5-Ky-oCw"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="4Ej-EP-zZV"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="z41-a8-WPw"/>
+                    </scrollView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="f7o-3E-UhY" secondAttribute="trailing" constant="272" id="5hJ-jF-2kz"/>
+                <constraint firstItem="f7o-3E-UhY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="FRM-jH-ZtZ"/>
+                <constraint firstAttribute="bottom" secondItem="uag-gm-qQ9" secondAttribute="bottom" id="dix-sm-URP"/>
+                <constraint firstItem="uag-gm-qQ9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nWx-Nm-wls"/>
+                <constraint firstItem="uag-gm-qQ9" firstAttribute="top" secondItem="f7o-3E-UhY" secondAttribute="bottom" constant="11" id="nqM-hM-Fcr"/>
+                <constraint firstItem="f7o-3E-UhY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="oT2-zQ-Qvd"/>
+                <constraint firstItem="uag-gm-qQ9" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" priority="250" id="pTQ-6v-kr6"/>
+                <constraint firstAttribute="trailing" secondItem="uag-gm-qQ9" secondAttribute="trailing" id="yum-Bn-Sv7"/>
+            </constraints>
+            <size key="customSize" width="390" height="102"/>
+            <connections>
+                <outlet property="genreLabel" destination="f7o-3E-UhY" id="bkH-Sm-5Fx"/>
+                <outlet property="scrollView" destination="uag-gm-qQ9" id="eTg-a8-a18"/>
+                <outlet property="viewInScroll" destination="feY-dh-NMe" id="H28-db-7m9"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
